@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { styles } from "../page";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
     return (
@@ -8,27 +9,27 @@ export default function Page() {
        
         <Image alt="Image" src="/logo.png" width={250} height={250} className=" object-contain" />
             <div className="flex flex-col gap-4 items-center">
-            <Link href={"/b1"} className={styles}>
-        <button>
+            <Link href={"/b1"} >
+        <Button>
     Botão 1
-        </button>
+        </Button>
       </Link>
-      <Link href={"/b2"} className={styles}>
-        <button>
+      <Link href={"/b2"} >
+        <Button>
     Botão 2
-        </button>
+        </Button>
       </Link>
-      <Link href={"/b3"} className={styles}>
-        <button>
+      <Link href={"/b3"} >
+        <Button>
     Botão 3
-        </button>
+        </Button>
       </Link>
 
       <Link href={"/"}>
             
-            <button className={styles}>
+            <Button >
             voltar ao menu inicial
-            </button>
+            </Button>
         </Link>
             </div>
         </div>

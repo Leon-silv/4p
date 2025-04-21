@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { styles } from "../page";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
     return (
         <div className="h-screen flex flex-col gap-4 justify-center px-40">
             <div className="flex flex-col">
-                <label htmlFor="name">Name</label>
-                <input id="name" type="text" placeholder="Type your name..." className="border px-4 py-2" />
+                <Label htmlFor="name">Name</Label>
+                <Input id="name" type="text" placeholder="Type your name..." className="border px-4 py-2" />
 
             </div>
             <div className="flex flex-col">
@@ -24,10 +27,10 @@ export default function Page() {
             </div>
 
             <Link href={"/"}>
-            
-                <button className={styles}>
-                voltar ao menu inicial
-                </button>
+
+                <Button >
+                    voltar ao menu inicial
+                </Button>
             </Link>
         </div>
     )

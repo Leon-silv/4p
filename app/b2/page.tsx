@@ -1,23 +1,26 @@
 import Link from "next/link";
 import { styles } from "../page";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
     return (
         <div className="h-screen flex flex-col gap-4 justify-center px-40">
             <div className="flex flex-col">
-                <label htmlFor="email">Email</label>
-                <input id="email" type="email" placeholder="Type your email..." className="border px-4 py-2" />
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="Type your email..." className="border px-4 py-2" />
 
             </div>
             <div className="flex flex-col">
-                <label >Options</label>
+                <Label >Options</Label>
                 <div className="flex items-cener gap-4">
                     <div className="flex items-center gap-1">
-                        <input type="checkbox" value={"yes"} />
+                        <Input type="checkbox" value={"yes"} />
                         <span>Yes</span>
                     </div>
                     <div className="flex items-center gap-1">
-                        <input type="checkbox" value={"no"} />
+                        <Input type="checkbox" value={"no"} />
                         <span>No</span>
                     </div>
                 </div>
@@ -25,9 +28,9 @@ export default function Page() {
 
             <Link href={"/"}>
             
-                <button className={styles}>
+                <Button >
                 voltar ao menu inicial
-                </button>
+                </Button>
             </Link>
         </div>
     )
